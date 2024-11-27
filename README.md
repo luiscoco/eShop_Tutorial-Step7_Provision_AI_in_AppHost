@@ -42,7 +42,7 @@ We donwload the Step6 application code from the above github repo
 
 ## 3. We modify the AppHost middleware
 
-To register the AI Service in the **Program.cs** file we add the following code:
+We add the following code to register the AI Service in the **Program.cs**:
 
 ```csharp
 const string openAIName = "openai";
