@@ -415,4 +415,14 @@ We remove the AI ConnectionString from the **appsettings.json** file
 
 ## 7. We run the Application and verify the results
 
+We first visit the **Aspire Dashboard**
 
+![image](https://github.com/user-attachments/assets/9598f2b7-d131-435d-9f5b-f5539541580b)
+
+Then we can navigate to the **WebApp** project: https://localhost:7112/
+
+![image](https://github.com/user-attachments/assets/8fdb23c1-7ade-4e90-b0c3-b1b15aa2e01a)
+
+If we cick on the **ShowChatbotButton** we can see the Chatbot control box
+
+![image](https://github.com/user-attachments/assets/5afec7e3-7a74-466a-ac35-d10368f24f0e)
