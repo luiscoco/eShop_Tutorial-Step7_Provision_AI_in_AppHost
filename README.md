@@ -2,7 +2,8 @@
 
 We can register and configure the **AI Chatbot Service** in the **AppHost** project or in the **WebApp** project
 
-In the previous sample **Step6**, we configured the AI Service in the **WebApp**, and now in this **Step7** we are going to configure the AI Service in the**AppHost**
+In the previous sample **Step6** (https://github.com/luiscoco/eShop_Tutorial-Step6_Adding_Chatbot
+), we configured the AI Service in the **WebApp**, and now in this **Step7** (https://github.com/luiscoco/eShop_Tutorial-Step7_Provision_AI_in_AppHost) we are going to configure the AI Service in the**AppHost**
 
 ## 1. Purpose of Provisioning AI Service in AppHost
 
