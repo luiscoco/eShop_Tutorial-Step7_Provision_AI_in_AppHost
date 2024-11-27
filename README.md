@@ -20,5 +20,16 @@ This abstracts the infrastructure complexity from the WebApp
 
 **e) Scalability**: If other projects (e.g., CatalogApi, OrderingApi) also need OpenAI, the AppHost avoids redundant configuration by sharing the same resource across projects
 
-## 2. 
+## 2. We download the solution from github repo
+
+## 3. We modify the AppHost middleware
+
+## 4. We add the AI ConnectionString in the appsettings.json (AppHost project)
+
+## 5. We modify the WebApp middleware
+
+## 6. We remove the AI connection string from appsettings.json (WebApp project)
+
+## 7. We run the Application and verify the results
+
 
