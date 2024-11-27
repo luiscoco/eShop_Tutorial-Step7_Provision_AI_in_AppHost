@@ -223,7 +223,7 @@ and also we define the AI Model
 
 ## 5. We modify the WebApp middleware
 
-To register the AI Service in the WebApp project we have to include the following code:
+To register the **AI Service** in the **WebApp** project we have to include the following code:
 
 ```csharp
 builder.Services.AddSingleton<IChatClient>(serviceProvider =>
@@ -267,7 +267,37 @@ builder.Services.AddSingleton<IChatClient>(serviceProvider =>
 });
 ```
 
-We can also review the whole Program.cs file:
+The above code sets up a **chat client** for **Azure OpenAI** integration using dependency injection
+
+It retrieves configuration values, validates them, creates an OpenAI client, and prepares it for use
+
+This design promotes modularity, ensures proper initialization, and adheres to best practices in .NET application architecture
+
+**Dependency Injection Registration**: The service is registered with the **AddSingleton** method, ensuring a single instance of the **IChatClient** is created and shared across the application's lifetime
+
+**Fetching Configuration**: The configuration values (e.g., the OpenAI connection string and chat model name) are retrieved from the application's **IConfiguration** service
+
+**Parsing the Connection String**: The OpenAI connection string, defined in the configuration, is parsed to extract the **Endpoint** and **Key** values
+
+If any values are missing, exceptions are thrown to ensure proper setup
+
+**Chat Model Validation**: The OpenAI chat model (AI:OpenAI:ChatModel) is also fetched from the configuration. If this value is missing, an exception is thrown
+
+**Azure Key Credential Setup**: The Endpoint is validated as a valid URI
+
+An AzureKeyCredential is created using the extracted API key
+
+**Azure OpenAI Client Creation**: An **AzureOpenAIClient** is instantiated using the **Endpoint** and **AzureKeyCredential**
+
+This client is customized into a chat client via **AsChatClient(deploymentName)**
+
+**Building the Chat Client**: A **ChatClientBuilder** is used to further configure the chat client, enabling function invocation and other features
+
+**Logging*** Information about the model, endpoint, and API key is logged to the console for debugging purposes
+
+**Return the Configured Chat Client**: The fully configured chat client is returned and registered as a singleton service
+
+We can also review the whole **Program.cs** code:
 
 ```csharp
 using WebApp.Components;
