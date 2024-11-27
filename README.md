@@ -1,5 +1,9 @@
 # Building 'eShop' from Zero to Hero: Provisioning Chatbot AI Service in AppHost project
 
+We can register and configure the **AI Chatbot Service** in the **AppHost** project or in the **WebApp** project
+
+In the previous sample **Step6**, we configured the AI Service in the **WebApp**, and now in this **Step7** we are going to configure the AI Service in the**AppHost**
+
 ## 1. Purpose of Provisioning AI Service in AppHost
 
 The **AppHost** project manages the infrastructure configuration and orchestration for your distributed application
@@ -22,7 +26,15 @@ This abstracts the infrastructure complexity from the WebApp
 
 ## 2. We download the solution from github repo
 
+The start point for this sample is this github repo: 
+
+https://github.com/luiscoco/eShop_Tutorial-Step6_Adding_Chatbot
+
+We donwload the Step6 application code from the above github repo
+
 ## 3. We modify the AppHost middleware
+
+
 
 ## 4. We add the AI ConnectionString in the appsettings.json (AppHost project)
 
